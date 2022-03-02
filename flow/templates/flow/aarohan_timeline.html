@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,37 +10,100 @@
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous" />
   <link rel="stylesheet" href="{% static 'css/timeline_css.css' %}">
+  {% comment %}
+  <link rel="stylesheet" href="{% static 'css/hamburger.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}"> {% endcomment %}
   <title>Timeline</title>
   <link rel="shortcut icon" type="image/jpg" href="{% static 'aarhnLogo.png' %}" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <video src="{% static 'videos/Untitled.mp4' %}" autoplay muted loop id="video">
+
+  <!-- OFFCANVAS For Profile Click Event-->
+
+  <video src="{% static 'videos/Untitled.mp4' %}" autoplay muted loop id="video1">
   </video>
+
   <div class="timeline-container" id="timeline-1">
     <div class="timeline-header">
       <h2 class="timeline-header__title">AAROHAN TIMELINE</h2>
       <h3 class="timeline-header__subtitle">For our 20th edition, we welcome everyone to the phenomenon that is Aarohan.
         It is about time we get to ushering in The New Dimension.</h3>
-
+      <div class="Dayz">
+        <button style="border-radius:10px" type="button" class="btn-ap"><a style="color:violet" href="{% url 'timelineDay1' %}">Day0</a></button>
+        <button style="border-radius:10px" type="button" class="btn-ap"><a style="color:violet" href="{% url 'timelineDay2' %}">Day1</a></button>
+        <button style="border-radius:10px" type="button" class="btn-ap"><a style="color:violet" href="{% url 'timelineDay3' %}">Day2</a></button>
+        <button style="border-radius:10px" type="button" class="btn-ap"><a style="color:violet" href="{% url 'timelineDay4' %}">Day3</a></button>
+      </div>
     </div>
 
 
     <!-- MAIN PART OF THE PAGE , UNCOMMENT TO USE-->
-    <!-- 
+
     <div class="timeline">
 
+
       <div class="timeline-item" data-text="">
         <div class="card">
           <div class="cardWrapper">
             <div class="image-event">
             </div>
             <div class="event">
-              <h1>ELECTRA</h1>
+              <h1>Prelims 0 </h1>
+            </div>
+            <h2>Mindsweepers</h2>
+            <h1 style="color:violet">01/03/22 6 PM - 02/03/22 6 PM</h1>
+            <h2> Freemex</h2>
+            <h1 style="color:violet"> 28/02/2022 7 PM - 02/03/2022 1 AM</h1>
+            <h2>Metaverse open session</h2>
+            <h1 style="color:violet">02/03/2022 6 PM</h1>
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="timeline-item" data-text="">
+        <div class="card">
+          <div class="cardWrapper">
+            <div class="image-event">
+            </div>
+            <div class="event">
+              <h1>Throughout the Event </h1>
             </div>
 
+            <!-- Digital Fortress: From Day 1(4 pm) to Day 3
+CTF: From Day 2 (00 hours/12 midnight) to Day 3
+OTH:  From Day 1 (9 pm) to Day 3 (9 pm)
+Tech Mela: Day 0 (7:00 pm)
+Journo detective:  Day 1(3:00 pm)
+Take 2: Day 3 (10 am) to 7th (10 am)
+Mazemerize: Day 0(9:00 pm) -->
 
-            <h2>DAY 1 - 4:30pm</h2>
+
+
+            <h2 style ="font-size:20px">Digital Fortess</h2>
+            <h1 style="color:violet">Day 1(4 pm) to Day 3</h1>
+            <h2 style ="font-size:20px"> CTF</h2>
+            <h1 style="color:violet"> Day 1 (9 pm) to Day 3 (9 pm)</h1>
+            <h2 style ="font-size:20px">Tech Mela</h2>
+            <h1 style="color:violet">Day 0 (7:00 pm)</h1>
+            <h2 style ="font-size:20px">Journo detective</h2>
+            <h1 style="color:violet">Day 1(3:00 pm)</h1>
+            <h2 style ="font-size:20px">Take 2</h2>
+            <h1 style="color:violet">Day 0 (10 am) to 4th (10 am)</h1>
+            <h2 style ="font-size:20px">Mazemerize</h2>
+            <h1 style="color:violet">02/03/2022(9:00 pm)</h1>
+
+
+
+
+
 
           </div>
         </div>
@@ -51,11 +115,65 @@
             <div class="image-event">
             </div>
             <div class="event">
-              <h1>ELECTRA</h1>
+              <h1>Inauguration Ceremony </h1>
+            </div>
+
+
+            <h1 style="color:violet">6pm-8pm</h1>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="timeline-item" data-text="">
+        <div class="card">
+          <div class="cardWrapper">
+            <div class="image-event">
+            </div>
+            <div class="event">
+              <h1>Prelims 1</h1>
+
+
 
             </div>
 
-            <h2>DAY 1 - 4:30pm</h2>
+            <h2 style="font-size:18px"> Contraptions</h2>
+
+            <h2> Invictus </h2>
+
+            <h2> Perplexity</h2>
+
+            <h2> Brain Darts </h2>
+
+            <h2> Matrix </h2>
+            <h2> Electra</h2>
+            <h2> Lights-Camera-Fiction</h2>
+            <h2> Transmission</h2>
+
+
+            <h1 style="color:violet">8-8:45pm</h1>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="timeline-item" data-text="">
+        <div class="card">
+          <div class="cardWrapper">
+            <div class="image-event">
+            </div>
+            <div class="event">
+              <h1>Enteract</h1>
+
+            </div>
+
+            <h1 style="color:violet">8:45 pm-9:00 pm</h1>
 
           </div>
         </div>
@@ -66,29 +184,85 @@
             <div class="image-event">
             </div>
             <div class="event">
-              <h1>ELECTRA</h1>
+              <h1>Prelims 2</h1>
+
+
 
             </div>
 
-            <h2>DAY 1 - 4:30pm</h2>
+            <h2 style="font-size:18px"> Conjecture</h2>
+
+            <h2> Bidweiser </h2>
+
+            <h2> BTS</h2>
+
+            <h2> Tech Charades </h2>
+
+            <h2> Auto Sharks </h2>
+            <h2> Explicate</h2>
+            <h2> Twin Attack</h2>
+            <!-- <h2> Transmission</h2> -->
+
+
+            <h1 style="color:violet">8-8:45pm</h1>
+
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item" data-text="">
+        <div class="card">
+          <div class="cardWrapper">
+            <div class="image-event">
+            </div>
+            <div class="event">
+              <h1>Spic Macay</h1>
+
+
+
+            </div>
+            <h1 style="color:violet">9:45 pm-10:00pm</h1>
 
           </div>
         </div>
       </div>
 
 
-    </div> -->
+
+
+
+      <div class="timeline-item" data-text="">
+        <div class="card">
+          <div class="cardWrapper">
+            <div class="image-event">
+            </div>
+            <div class="event">
+
+              <h1>Prelims</h1>
+            </div>
+            <h2 style="color:white">Ingenuitus <span style="color:violet">10:00 pm </h2>
+            <h2 style="color:white">ARcanum <span style="color:violet">10:30 pm </h2>
+
+            {% comment %} <h1 style="color:violet">10:00 pm</h1> {% endcomment %}
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
   </div>
-  <div class="wrapper">
+  {% comment %} <div class="wrapper">
     <h1>Coming soon</span></h1>
-  </div>
+  </div> {% endcomment %}
 
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
-    document.querySelector('video').playbackRate = 0.5;
+    document.querySelector('video1').playbackRate = 0.5;
     /*(function ($) {
       $.fn.timeline = function () {
         var selectors = {
@@ -147,6 +321,10 @@
     $("#timeline-1").timeline();*/
 
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="{% static 'js/home.js' %}"></script>
 </body>
 
 </html>
