@@ -1,42 +1,42 @@
 {% load static %}
-
+{% include 'flow/navbar.html' %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-    crossorigin="anonymous" />
   <link rel="stylesheet" href="{% static 'css/timeline_css.css' %}">
-  {% comment %}
   <link rel="stylesheet" href="{% static 'css/hamburger.css' %}">
-  <link rel="stylesheet" href="{% static 'css/home.css' %}"> {% endcomment %}
-  <title>Timeline</title>
+  <link rel="stylesheet" href="{% static 'css/new.css' %}">
   <link rel="shortcut icon" type="image/jpg" href="{% static 'aarhnLogo.png' %}" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Timeline</title>
 </head>
 
 <body>
 
   <!-- OFFCANVAS For Profile Click Event-->
 
-  <video src="{% static 'videos/Untitled.mp4' %}" autoplay muted loop id="video1">
+  <video src="{% static 'videos/arhn_timeline.mp4' %}" autoplay muted loop id="video1">
   </video>
+
+  {% block content %}
+  {% endblock %}
+
+
   <div class="timeline-container" id="timeline-1">
     <div class="timeline-header">
       <h2 class="timeline-header__title">AAROHAN TIMELINE</h2>
       <h3 class="timeline-header__subtitle">For our 20th edition, we welcome everyone to the phenomenon that is Aarohan.
         It is about time we get to ushering in The New Dimension.</h3>
         <div class="Dayz">
-          <button style="border-radius:10px" type="button" class="btn-ap"><a style="color:violet" href="{% url 'timelineDay1' %}">Day0</a></button>
-          <button style="border-radius:10px" type="button" class="btn-ap"><a style="color:violet" href="{% url 'timelineDay2' %}">Day1</a></button>
-          <button style="border-radius:10px" type="button" class="btn-ap"><a style="color:violet" href="{% url 'timelineDay3' %}">Day2</a></button>
-          <button style="border-radius:10px" type="button" class="btn-ap"><a style="color:violet" href="{% url 'timelineDay4' %}">Day3</a></button>
-        </div>
+        <a class="btn-ap" style="color:violet" href="{% url 'timelineDay1' %}">Day0</a>
+        <a class="btn-ap" style="color:violet" href="{% url 'timelineDay2' %}">Day1</a>
+        <a class="btn-ap" style="color:violet" href="{% url 'timelineDay3' %}">Day2</a>
+        <a class="btn-ap" style="color:violet" href="{% url 'timelineDay4' %}">Day3</a>
+      </div>
     </div>
 
 
@@ -49,17 +49,22 @@
           <div class="cardWrapper">
             <div class="image-event">
             </div>
-          <br>
-          <br>
-
-             <h2 style="font-size:20px"> Inquest </h2>
+            <div class="event">
+              <h1>Inquest</h1>
+            </div>
              <h1 style="color:violet">9:00 am</h1>
              <br>
-             <h2 style="font-size:20px"> B-Plan </h2>
+             <div class="event">
+              <h1>B-Plan</h1>
+            </div>
              <h1 style="color:violet">9:30 am</h1>
              <br>
-             <h2 style="font-size:20px"> Ingenuitus</h2>
-             <h2 style="font-size:20px">REChase </h2>
+             <div class="event">
+              <h1>Ingenuitus</h1>
+            </div>
+             <div class="event">
+              <h1>REChase</h1>
+            </div>
               <h1 style="color:violet">10:00 am</h1>
               <br>
             <br>
@@ -85,7 +90,7 @@
 
             <h2> Data Science</h2>
 
-            <h2> AI +AR </h2>
+            <h2> AI + AR </h2>
             <h1 style="color:violet">10:00 am</h1>
              <br>
              <div class="event">

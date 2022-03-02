@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One');
 
-
+@import url('http://fonts.cdnfonts.com/css/lemonmilk');
 
 
  .timeline {
@@ -112,6 +111,7 @@
 }
 
  .timeline-container {
+	 margin-top: 80px !important;
 	 width: 100%;
 	 position: relative;
 	 transition: 0.3s ease 0s;
@@ -130,11 +130,15 @@
 }
  .timeline-header__title {
 	 color: #fff;
-	 font-size: 46px;
-	 font-family: Cardo;
+	 font-size: 5rem;
+	 font-family: 'Lemon/Milk light',
+	 sans-serif;
 	 font-weight:220;
 	 margin: 0;
-	 background: linear-gradient(90deg, rgba(247,54,221,1) 0%, rgba(167,38,151,1) 26%, rgba(205,74,185,1) 47%, rgba(203,114,26,1) 74%, rgba(255,149,0,1) 100%);
+	 font-family: 'Lemon/Milk light', sans-serif;
+	 background-color: #00DBDE;
+	 background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
 	 -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -143,11 +147,11 @@
  .timeline-header__subtitle {
 
 	 color: white;
-	 font-family: 'Pathway Gothic One', sans-serif;
+	 font-family: 'comfortaa' sans-serif;
+	 font-weight: 600;
 	 font-size: 20px;
 	 letter-spacing: 5px;
 	 margin: 10px 0 0 0;
-	 font-weight: 100;
 	 padding-left: 7px;
 	 margin-bottom: 10px;
 }
@@ -176,7 +180,7 @@
 	
   }
 .timeline-card{
-    background-color: rgba(73, 0, 61, 0.5);
+    background-color: rgba(28, 0, 73, 0.5);
     border: 3px solid;
 	border-width: 3px;
     padding: 7%;
@@ -196,19 +200,18 @@ body::-webkit-scrollbar {
     mask-composite: exclude; 
 }
   .card {
-	background-color: rgba(73, 0, 61, 0.671);
+	background-color: rgba(27, 3, 112, 0.671) !important;
 	width: 90%;
 	height: fit-content;
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	border-radius: 15px;
+	border-radius: 15px !important;
 	margin: 18px 6.5px;
 	padding-bottom: 5px;
 	padding-top: 2px; 
-	z-index: 10000;
+	z-index: 10;
   }
   .card::before {
 	content: "";
@@ -219,12 +222,17 @@ body::-webkit-scrollbar {
 	bottom: 0;
 	z-index: -1;
 	border-radius: 15px;
-	padding: 2px;
+	padding: 4px;
 	background: linear-gradient(-120deg, #00c0c7, #ff009d);
 	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: destination-out;
 	mask-composite: exclude;
   }
+
+  .cardWrapper{
+	padding: 10px !important;
+  }
+
   .event {
 	  
 	display: flex;
@@ -331,14 +339,53 @@ body::-webkit-scrollbar {
 	 width:fit-content ;
 }
 }
+
+
 .cardWrapper h2{
 	font-size:180px;
 }
 .card h2{
 	font-size:17px;
 }
+
+.Dayz{
+	margin: 50px auto 20px;
+}
+
+.Dayz a:nth-child(2){
+	margin: 0px 5px 0px 5px;
+}
+.Dayz a:nth-child(3) {
+	margin-right: 5px;
+}
+
 .btn-ap{
-	background-color: rgba(223, 101, 101,0.1);
-	padding:5px 7px 5px 7px ;
+	color: #fff !important;
+	font-weight: 600;
+	background:linear-gradient(45deg, #00DBDE 0%, #3235eb 100%);
+	font-size: 20px !important;
+	padding:10px;
+	background-size: 100% 100%;
+	border-radius: 7px;
 	text-decoration :none !important;
+	transition: 0.5s all ease-in-out;
+	animation: glow 1s ease infinite linear;
+}
+
+@keyframes glow{
+		0% {
+			background-position: 0% 50%;
+		}
+
+		50% {
+			background-position: 100% 50%;
+		}
+
+		100% {
+			background-position: 0% 50%;
+		}
+}
+
+.btn-ap:hover {
+	transition: 0.5s all ease-in-out;
 }
