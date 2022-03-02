@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    <div id="loading">
+        <img src="{% static 'img/final-logo.png' %}" alt="Aarohan">
+      </div>
     <div class="arnav" id="moar">
         <a class="left-navbar" href="#home">
             <img src="{% static 'img/final-logo.png' %}" alt="Aarohan" id="navlogo">
@@ -206,7 +209,7 @@
     <div class="days">
         {% for d in days %}
         <div class="day" day={{d.day_number}}>
-            <h3>DAY {{d.day_number}}</h3>
+            <h3>DAY {{d.day_number|add:"-1"}}</h3>
         </div>
         {% endfor %}
     </div>
@@ -254,11 +257,11 @@
             str.addEventListener("click", () => {
                 for (var j = 0; j < man.length; j++) {
                     const check = man[j];
-                    if (check.classList.contains("active")) {
-                        check.classList.remove("active");
+                    if (check.classList.contains("active2")) {
+                        check.classList.remove("active2");
                     }
                 }
-                str.classList.add("active");
+                str.classList.add("active2");
                 const dy = str.getAttribute('day');
 
                 const crdiv = document.getElementById("cards");
