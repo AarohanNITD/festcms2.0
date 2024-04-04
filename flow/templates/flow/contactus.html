@@ -12,130 +12,23 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="{% static 'css/contactus.css' %}" />
+    <link rel="stylesheet" href="../../static/css/contactus.css" />
     <title>Contact Us | Aarohan 2023</title>
   </head>
 
   <body>
     {% include 'flow/navbarAndFooter/navbar.html' %} 
     
-    <img id="bg-vid" src="{% static 'images/contactus/Background.jpg' %}">
+    <img id="bg-vid" style="background-size:object-fit; height:120vh; width:220vh; left:-3px;" src="{% static 'images/contactus/contactus.png' %}">
 
     <!-- OFFCANVAS For Profile Click Event-->
     <div class="container">
-      <div class="side">
+      <div class="side-header">
         <h1 class="side-header">Contact Us</h1>
       </div>
-
-      <div class="main">
-        
-        <div class="contact-social">
-          <h1>Our Social Links</h1>
-          <div class="social-links-container">
-            <!-- Facebook -->
-            <a
-              href="https://www.facebook.com/arhn.nitd/"
-              class="social-link"
-              target="_blank"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-facebook"
-              >
-                <path
-                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                ></path>
-              </svg>
-            </a>
-
-            <!-- Instagram -->
-            <a
-              href="https://instagram.com/arhn.nitd"
-              class="social-link"
-              target="_blank"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-instagram"
-              >
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path
-                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                ></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-
-            <!-- Linkedin -->
-            <a
-              href="https://www.linkedin.com/company/aarohan-nit-durgapur/"
-              class="social-link"
-              target="_blank"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-linkedin"
-              >
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                ></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-
-            <!-- Twitter -->
-            <a
-              href="https://twitter.com/aarohan_nitdgp"
-              class="social-link"
-              target="_blank"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-twitter"
-              >
-                <path
-                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </div>
+      <!-- <div class="main"> -->
         <div class="contact-mail">
-          <h1>Send Us a Mail</h1>
-          <h4>Overall Coordinators, Aarohan 2023</h4>
+          <h4 class="side-heade" style="font-size: 15px;">Overall Coordinators, Aarohan 2023</h4>
           <div>
             <a href="mailto:mntcnitd@gmail.com" class="contact">
               <div class="contact-icon">
@@ -159,11 +52,11 @@
               </div>
 
               <div class="contact-info">
-                <h2>Abantika Basu</h2>
+                <h2>Kabita Harijan</h2>
               </div>
             </a>
 
-            <a href="tel:+919830300600" class="contact">
+            <a href="tel:+918574613029" class="contact">
               <div class="contact-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -185,13 +78,13 @@
               </div>
 
               <div class="contact-info">
-                <h2>DIVAS GUPTA</h2>
+                <h2>Rahul Kashyap</h2>
               </div>
             </a>
           </div>
 
           <div>
-            <a href="mailto:nikhilkumar654231@gmail.com" class="contact">
+            <a href="mailto:shashank7rocks@gmail.com" class="contact">
               <div class="contact-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +106,7 @@
               </div>
 
               <div class="contact-info">
-                <h2>Nikhil Kumar</h2>
+                <h2>Shashank Shekhar</h2>
               </div>
             </a>
 
@@ -239,7 +132,7 @@
               </div>
 
               <div class="contact-info">
-                <h2>Ram Sharma</h2>
+                <h2>Akshay Kumar Singh</h2>
               </div>
             </a>
           </div>
@@ -266,18 +159,121 @@
               </div>
 
               <div class="contact-info">
-                <h2>Vishal Mahavar</h2>
+                <h2>Akshay A Baiju</h2>
               </div>
             </a>
           </div>
         </div>
-      </div>
+        <!-- <hr style="color:white; height:0.1vh; width:100vh; display:flex;justify-content: space-around; gap:10 px;"> -->
+        <div class="contact-social">
+          <h1 class="side-heade" style="font-size: 20px;">Our Social Links</h1>
+          <div class="social-container">
+            <div class="social-links-container">
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/arhn.nitd/"
+                class="social-link"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-facebook"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com/arhn.nitd"
+                class="social-link"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-instagram"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <!-- Linkedin -->
+              <a
+                href="https://www.linkedin.com/company/aarohan-nit-durgapur/"
+                class="social-link"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-linkedin"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+
+              <!-- Twitter -->
+              <a
+                href="https://twitter.com/aarohan_nitdgp"
+                class="social-link"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-twitter"
+                >
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
     </div>
 
-    <div class="footer-contact">
-      <!-- {% include 'flow/navbarAndFooter/footer.html' %} -->
-    </div>
-    {% include 'flow/navbarAndFooter/footer.html' %}
   </body>
 
   <script

@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @font-face {
-  font-family: Monument;
-  src: url('../fonts/MonumentExtended-Regular.otf');
+  font-family: Astro;
+  src: url("../font/as.ttf");
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -27,7 +25,7 @@
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow: unset;
   overflow-x: hidden;
   overflow-y: auto !important;
@@ -59,13 +57,14 @@
 }
 
 .side-header {
+  margin-top: 20vh;
   text-align: center;
   font-size: clamp(2rem, 5vw, 3.95rem);
-  font-family: 'Monument', display !important;
+  font-family: "Astro",display !important;
   letter-spacing: 5px;
   color: rgb(237, 218, 255);
   text-transform: uppercase;
-  text-shadow: rgb(183, 111, 251) 0 0 35px;
+  /* text-shadow: rgb(183, 111, 251) 0 0 35px; */
   margin-block: 3rem;
 }
 
@@ -101,10 +100,13 @@
   box-shadow: rgba(255, 255, 255, 0.25) 4px 4px 15px;
 }
 
+.contact-social {
+  margin-top: 4em;
+}
 .contact-social h1,
 .contact-mail h1 {
   font-size: 2rem;
-  font-family: 'Monument', display !important;
+  font-family: "Astro", display !important;
   letter-spacing: 5px;
   color: rgb(237, 218, 255);
   text-transform: uppercase;
@@ -112,7 +114,7 @@
   margin-block-end: 1rem;
 }
 .contact-mail h4 {
-  font-family: 'Monument', display !important;
+  font-family: "Astro", display !important;
   font-size: 1.2rem;
   letter-spacing: 2px;
   color: rgb(237, 218, 255);
@@ -144,7 +146,7 @@
 }
 
 .contact-info h2 {
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 0;
 }
 

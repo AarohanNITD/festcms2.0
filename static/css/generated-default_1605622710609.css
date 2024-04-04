@@ -53,6 +53,13 @@ input, textarea {
 }
 
 @font-face {
+    font-family: "Astro";
+    src: url(../font/as.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "b";
     src: url(../fonts/fonts-battling-medium-webfont.eot);
     src: url(../fonts/fonts-battling-medium-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/fonts-battling-medium-webfont.woff2) format("woff2"), url(../fonts/fonts-battling-medium-webfont.woff) format("woff"), url(../fonts/fonts-battling-medium-webfont.ttf) format("truetype"), url(../fonts/battling-medium-webfont.svg#battling_mediummedium) format("svg");

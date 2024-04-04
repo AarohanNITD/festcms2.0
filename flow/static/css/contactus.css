@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @font-face {
-  font-family: Monument;
-  src: url("../fonts/MonumentExtended-Regular.otf");
+  font-family: Astro;
+  src: url("../font/as.ttf");
 }
 
 * {
@@ -19,12 +19,14 @@
 }
 
 .container {
-  height: 70vh;
+  height: max-content;
+  margin-top: 10vh;
   width: 100%;
   max-width: 1280px;
-  margin-inline: auto;
-  display: flex;
-  justify-content: space-between;
+  margin-inline:auto;
+  align-content: center;
+  /* display: flex; */
+  /* justify-content: space-between; */
   font-family: "Poppins", sans-serif;
   overflow: unset;
   overflow-x: hidden;
@@ -50,46 +52,61 @@
   place-items: center;
 }
 
-.main {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
+.side-header {
+  margin-top: 20vh;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.95rem);
+  font-family: "Astro",display !important;
+  letter-spacing: 5px;
+  line-height: 35px;
+  color: rgb(237, 218, 255);
+  text-transform: uppercase;
+  margin-block: 3rem;
 }
 
-.side-header {
+.side-heade {
+  margin-top: 10vh;
+  font-size: 10px;
   text-align: center;
-  font-size: clamp(2rem, 5vw, 3.95rem);
-  font-family: "Monument", display !important;
+  font-size: clamp(2rem, 5vw, 2.95rem);
+  font-family: "Astro",display !important;
   letter-spacing: 5px;
   color: rgb(237, 218, 255);
   text-transform: uppercase;
-  text-shadow: rgb(183, 111, 251) 0 0 35px;
-  margin-block: 3rem;
+  line-height: 30px;
+  margin-block: 0.7rem;
 }
 
 .contact-mail {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .contact-mail > div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .contact {
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 45vh;
   color: rgba(241, 241, 241);
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  padding: 1.5rem 3.5rem 1.5rem 2rem;
-  border-radius: 20px;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+  border-radius: 10px;
   transition: all 0.3s;
+  box-shadow: rgba(39, 188, 233, 0.25) 1px 1px 1px 1px;
+}
+
+.contact-info h2 {
+  font-size: 13px;
+  margin-bottom: 0;
 }
 
 .contact:hover {
@@ -100,12 +117,12 @@
 }
 
 .contact-social {
-  margin-top: 4em;
+  margin-top: 2.5em;
 }
 .contact-social h1,
 .contact-mail h1 {
   font-size: 2rem;
-  font-family: "Monument", display !important;
+  font-family: "Astro", display !important;
   letter-spacing: 5px;
   color: rgb(237, 218, 255);
   text-transform: uppercase;
@@ -113,20 +130,26 @@
   margin-block-end: 1rem;
 }
 .contact-mail h4 {
-  font-family: "Monument", display !important;
+  font-family: "Astro", display !important;
   font-size: 1.2rem;
   letter-spacing: 2px;
   color: rgb(237, 218, 255);
   margin-top: -1rem;
 }
+
 .social-links-container {
   display: flex;
   gap: 2.5rem;
 }
 
+.social-container{
+  display: flex;
+  justify-content: space-around;
+}
+
 .social-link {
-  width: 85px;
-  height: 85px;
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.5);
@@ -144,16 +167,122 @@
   box-shadow: rgba(255, 255, 255, 0.25) 4px 4px 15px;
 }
 
-.contact-info h2 {
-  font-size: 24px;
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1100px) {
+  #bg-vid {
+    background-size: object-fit;
+    height:100vh;
+    width:1200vh;
+    filter:blur(3px);
+  }
   .container {
     flex-direction: column;
     padding-inline: 1rem;
-    margin-top: 110px;
+    margin-top: 20vh;
+  }
+
+  .side,
+  .main {
+    width: auto;
+  }
+
+  .contact {
+    width: 65vh;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    border-radius: 3vh;
+  }
+  .contact-social h1 {
+    font-size: 1.25rem;
+    margin-block: 1rem;
+  }
+  .contact-info h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .contact-mail{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; 
+  }
+  .contact-mail > div {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+  }
+  .side-header h1{
+    font-size: clamp(2rem, 5vw, 3.95rem);
+    margin-block: 2rem;
+  }
+
+  .social-link {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #bg-vid {
+    background-size: object-fit;
+    backdrop-filter: blur(100%);
+    filter: blur(3px);
+  }
+
+  .container {
+    flex-direction: column;
+    padding-inline: 1rem;
+    margin-top: 15vh;
+  }
+
+  .side,
+  .main {
+    width: auto;
+  }
+
+  .contact {
+    width: 45vh;
+    padding: 1.5rem;
+    border-radius: 2.5vh;
+  }
+  .contact-social h1 {
+    font-size: 1.25rem;
+    margin-block: 1rem;
+  }
+  .contact-info h2 {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .contact-mail{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; 
+  }
+  .contact-mail > div {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+  }
+  .side-header h1{
+    font-size: clamp(2rem, 5vw, 3.95rem);
+    margin-block: 2rem;
+  }
+
+  .social-link {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+
+  #bg-vid {
+    background-size: object-fit;
+    filter: blur(3px);
+  }
+
+  .container {
+    flex-direction: column;
+    padding-inline: 1rem;
+    margin-top: 15vh;
   }
   .side,
   .main {
@@ -167,17 +296,26 @@
     gap: 2.5rem;
   }
 
-  .side-header {
-    font-size: 2rem;
-    margin-block: 1.5rem;
+  .contact-info h2 {
+    font-size: 14px;
+    margin-bottom: 0;
   }
 
-  .contact-mail h1,
+  .side-header h1{
+    font-size: clamp(2rem, 5vw, 3.95rem);
+    margin-block: 2rem;
+  }
+
   .contact-social h1 {
     font-size: 1.25rem;
     margin-block: 1rem;
   }
 
+  .contact-mail{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; 
+  }
   .contact-mail > div {
     display: flex;
     flex-direction: column;
@@ -185,16 +323,19 @@
   }
 
   .contact {
-    width: fit-content;
+    width: 50vh;
+    padding: 1.5rem;
   }
 
   .social-links-container {
     display: flex;
     gap: 1.5rem;
+    justify-content: space-around;
   }
 
   .social-link {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
   }
 }
+
