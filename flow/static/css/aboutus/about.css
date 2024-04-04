@@ -6095,7 +6095,7 @@ html.rd-navbar-fixed-linked .page {
   /* display: none; */
   font-weight: 600;
   color: #E14413;
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -6103,13 +6103,13 @@ html.rd-navbar-fixed-linked .page {
   /* display: none; */
   /* font-weight: 900; */
   font-weight: 600;
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Montserrat", sans-serif;
 }
 
 @font-face {
   font-family: 'astrofont';
-  src: url('/static/fonts/ASTRO867.TTF') format('truetype');
+  src: url('/static/fonts/as.ttf') format('truetype');
 }
 
 
@@ -6119,6 +6119,13 @@ html.rd-navbar-fixed-linked .page {
   font-weight: lighter;
   font-family: 'astrofont', sans-serif;
   text-transform: capitalize;
+  font-size: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .changeText .aboutus {
+    font-size: 65px;
+  }
 }
 
 
