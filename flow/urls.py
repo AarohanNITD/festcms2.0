@@ -24,7 +24,6 @@ urlpatterns = [
     path('contactus',contactus,name="contactus"),
     path('attractions',attractions_page,name="attractions"),
     path('teams/',team_page,name="teams"),
-    path('team24/',teamPage24,name="team24"),
     path('events', events, name="events"),
     path('timeline', timeline, name="timeline"),
     path('judge-auth', signin, name="signin"),

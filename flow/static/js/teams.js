@@ -1,128 +1,127 @@
-var category=0
+/* START CODE FOR NAVBAR */
+// const hamburgerMenu = document.querySelector("#hamburger-menu");
+// const overlay = document.querySelector("#overlay");
+// const nav1 = document.querySelector("#nav-1");
+// const nav2 = document.querySelector("#nav-2");
+// const nav3 = document.querySelector("#nav-3");
+// const nav4 = document.querySelector("#nav-4");
+// const nav5 = document.querySelector("#nav-5");
+// const navItems = [nav1, nav2, nav3, nav4, nav5];
 
-colorPalette=["#0a043c","#03506f","#4cd3c2","#b7efcd"]
+// function navAnimation(val1, val2) {
+//     navItems.forEach((nav, i) => {
+//         nav.classList.replace(`slide-${val1}-${i + 1}`, `slide-${val2}-${i + 1}`);
+//     });
+// }
 
-teams=JSON.parse(document.getElementById("teams").textContent)
-members=JSON.parse(document.getElementById("members").textContent)
-console.log(teams)
-console.log(members)
+// function toggleNav() {
+//     hamburgerMenu.classList.toggle("active");
+
+//     overlay.classList.toggle("overlay-active");
+
+//     if (overlay.classList.contains("overlay-active")) {
+//         overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
+
+//         navAnimation("out", "in");
+//     } else {
+//         overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
+
+//         navAnimation("in", "out");
+//     }
+// }
+
+// hamburgerMenu.addEventListener("click", toggleNav);
+// navItems.forEach((nav) => {
+//     nav.addEventListener("click", toggleNav);
+// });
+/* CODE FOR NAVBAR END  */
+
+const hamburger_menu = document.querySelector(".hamburger-menu");
+const container = document.querySelector(".container");
+
+hamburger_menu.addEventListener("click", () => {
+    container.classList.toggle("active");
+});
+
+/* START CODE FOR TEAM */
+
+// window.addEventListener('scroll', function() {
+//     var scrollPosition = window.scrollY;
+
+//     document.querySelectorAll('.letter').forEach(function(letter) {
+//         var letterTop = letter.getBoundingClientRect().top;
+//         var letterHeight = letter.getBoundingClientRect().height;
+
+//         var distance = Math.max(0, scrollPosition - letterTop);
 
 
-var no_of_categories=teams.length;
+//         var scaleFactor = 1 + (distance / letterHeight);
 
-var left=document.getElementsByClassName('fa-backward')[0]
-var right=document.getElementsByClassName('fa-forward')[0]
+//         letter.style.transition = 'transform 0.1 ease';
+//         letter.style.transform = 'scaleY(' + scaleFactor + ')';
+//     });
+// });
 
-const changeTeams=()=>{
-    cat=category
-    console.log("category idx", category)
-    var no_of_cards=members[category].length;
+/* CODE FOR TEAM END */
 
-    // console.log(category,"category")
-    // console.log("changing category",teams[category].name,no_of_cards,members[category][0])
 
-    document.getElementById("cards").innerHTML="";
+/* CODE FOR CARD */
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
 
-    for(let i=1;i<=no_of_cards;i++)
-    {
-        document.getElementById("cards").innerHTML+=
-        `<div class="card glitch" id="card${i}" card_no="${i}">
-            <img src="static/aarhnLogo.png" alt="">
-            <div class="glitch__layers">
-                <div class="glitch__layer"></div>
-                <div class="glitch__layer"></div>
-                <div class="glitch__layer"></div>
-            </div>
-            <h1 class="member-details name">Name</h1>
-            <h3 class="member-details name">Club Name</h3>
-        </div>`
-    }
+    cards.forEach(card => {
+        card.addEventListener('click', function () {
+            const hamburgerMenu = document.querySelector("#hamburger-menu");
+            hamburgerMenu.classList.add('hide-transition');
+            setTimeout(() => {
+                hamburgerMenu.classList.add('hidden');
+            }, 500);
 
-    for(let j=0;j<no_of_cards;j++)
-    {
-        const image=`media\/${members[category][j].profile_img}`
-        document.querySelector(`#card${j+1} img`).src=image;
-        document.querySelectorAll(`#card${j+1} div.glitch__layers div.glitch__layer`).forEach((layer)=>layer.style.backgroundImage=`url(${image})`)
-    }
+            setTimeout(() => {
+                const crossInput = document.querySelector('input#button');
+                crossInput.checked = true;
+                hamburgerMenu.classList.remove('hidden');
+                hamburgerMenu.classList.remove('hide-transition');
+            }, 1000);
+        });
+    });
+});
 
-    const cards=document.querySelectorAll(".card img")
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
 
-    document.querySelectorAll(".card").forEach((card)=>{
-        let memberDetails=document.getElementById("member-details")
-        let teamCategory=document.getElementById("team-category")
-        
-        card.addEventListener("mouseover",()=>{
-            // card.classList.add("sparkle")
-            card.style.zIndex=2
+    cards.forEach(card => {
+        card.addEventListener('mouseover', mouseOver);
+        card.addEventListener('mouseleave', mouseLeave);
+        card.addEventListener('mousemove', mouseMove);
+    });
+});
 
-            let memberName=document.getElementById("member-name")
-            let memberClub=document.getElementById("member-club")
-            let memberPosition=document.getElementById("member-position")
-
-            console.log(category,"cat now")
-
-            let card_no=card.getAttribute("card_no")
-           
-            console.log("card no", members[cat][card_no-1].name)
-            let name= `${members[cat][card_no-1].name}`
-            let club= `${members[cat][card_no-1].choice}`
-            let position= `${members[cat][card_no-1].position}`
-
-            memberName.innerHTML=name
-            memberClub.innerHTML=club
-            memberPosition.innerHTML=position
-
-            memberName.setAttribute("data-text",name)
-            memberPosition.setAttribute("data-text",position)
-            memberClub.setAttribute("data-text",club)
-
-            memberDetails.style.display="flex"
-            teamCategory.style.display="none"
-        })
-        card.addEventListener("mouseleave",()=>{
-            // card.classList.remove("sparkle")
-            card.style.zIndex=0;
-
-            memberDetails.style.display="none"
-            teamCategory.style.display="flex"
-        })
-    })
-        
-    let teamCategory=`${teams[category].name}`
-    let categoryTag=document.getElementById("team-category")
-    categoryTag.innerHTML=teamCategory
-
-    document.getElementById("team-category").setAttribute("data-text",teamCategory)
-    
-    document.getElementById("color-css").href=`../static/css/teams/teams${category%3+1}.css`
+function mouseOver(event) {
+    const cardContent = event.currentTarget.querySelector('.card-content');
+    cardContent.classList.add('hover');
 }
 
-changeTeams()
-
-const changeColor=()=>{
-    category++;
-    if(category==no_of_categories)
-        category=0
-    console.log("changing color")
-    changeTeams()
+function mouseLeave(event) {
+    const cardContent = event.currentTarget.querySelector('.card-content');
+    cardContent.classList.remove('hover');
+    cardContent.style.transform = "";
 }
 
-var interval= setInterval(changeColor,10000)
+function mouseMove(event) {
+    const cardContent = event.currentTarget.querySelector('.card-content');
+    const cardWidth = event.currentTarget.offsetWidth;
+    const cardHeight = event.currentTarget.offsetHeight;
+    const offsetX = event.offsetX;
+    const offsetY = event.offsetY;
 
-left.addEventListener("click", ()=>{
-    clearInterval(interval)
-    interval = setInterval(changeColor,10000)
-    category--;
-    if(category<0)
-    category=no_of_categories-1
-    changeTeams()
-})
+    const rotationY = (offsetX - cardWidth / 2) / 30;
+    const rotationX = (cardHeight / 2 - offsetY) / 35;
 
-right.addEventListener("click", ()=>{
-    clearInterval(interval)
-    interval = setInterval(changeColor,10000)
-    category++;
-    if(category==no_of_categories)
-    category=0
-    changeTeams()
-})
+    if (offsetX > (cardWidth / 2)) {
+        cardContent.style.transform = `translate3d(0px, 0px, 30px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    } else if (offsetX < (cardWidth / 2)) {
+        cardContent.style.transform = `translate3d(0px, 0px, 30px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    }
+}
+/* CODE FOR CARD */

@@ -106,16 +106,8 @@ def team_page(request):
     for umbrella in umbrellas:
         members.append(TeamMember.objects.filter(team=umbrella))
     context = {'teams':umbrellas,'members':members}
-    return render(request,"flow/teams.html",context)
+    return render(request,"flow/teams.html",context)    
 
-def teamPage24(request):
-    teams = TeamCategory.objects.all()
-    members = []
-    for team in teams:
-        members.append(TeamMember.objects.filter(team=team))
-    context = {'teams':teams,'members':members}
-    return render(request,"flow/team24.html",context)
-    
 
 def timeline(request):
     days = Timeline.objects.all()
