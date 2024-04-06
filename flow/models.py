@@ -130,10 +130,9 @@ class TeamCategory(models.Model):
 
 class TeamMember(models.Model):
     team = models.ManyToManyField(TeamCategory)
-    name = models.CharField(max_length=50,
-                            help_text="Enter the name of the member here")
-    position = models.CharField(
-        max_length=50, help_text="Enter the position of the person", blank=True)
+    teamName = models.CharField(max_length=100, blank=True)
+    name = models.CharField(max_length=50, help_text="Enter the name of the member here")
+    position = models.CharField(max_length=50, help_text="Enter the position of the person", blank=True)
     profile_img = models.ImageField(blank=True, upload_to="members/")
     club_choice = (
         ("GLUG", "GNU/Linux Users' Group"),
@@ -142,14 +141,19 @@ class TeamMember(models.Model):
         ("MNTC", "Maths n Tech Club"),
         ("RECURSION", "RECursion"),
     )
-    choice = models.CharField(
-        max_length=10,
-        choices=club_choice,
-        default="GLUG"
-    )
+    choice = models.CharField(max_length=10, choices=club_choice, default="GLUG")
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)  # Save the instance first
+        if self.team.exists():
+            self.teamName = ', '.join(team.name for team in self.team.all())
+        else:
+            self.teamName = ""
+        super().save(*args, **kwargs)  # Save again after updating teamName
 
     def __str__(self):
         return self.name
+
 
 
 class TechmelaProject(models.Model):
