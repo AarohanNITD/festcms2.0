@@ -36,33 +36,55 @@
 // });
 /* CODE FOR NAVBAR END  */
 
+// const hamburger_menu = document.querySelector(".hamburger-menu");
+// const container = document.querySelector(".container");
+// const shadows = document.querySelector(".shadow");
+// const navHeader = document.getElementById('navHeader');
+
+// hamburger_menu.addEventListener("click", () => {
+//     container.classList.toggle("active");
+//     document.body.classList.toggle('no-scroll');
+//     const screenWidth = window.innerWidth;
+//     if (screenWidth < 656) {
+//         shadows.classList.toggle('mobileDisplay');
+//         navHeader.classList.toggle('mobileHeader');
+//     }
+
+// });
 const hamburger_menu = document.querySelector(".hamburger-menu");
 const container = document.querySelector(".container");
+const shadows = document.querySelectorAll(".shadow");
+const navHeader = document.getElementById('navHeader');
+const links = document.querySelector(".links");
+
+function toggleClasses() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 675 && container.classList.contains("active")) {
+        links.classList.remove('links');
+        links.classList.add('mobileLinks');
+        for (let i of shadows) {
+            i.classList.add('mobileDisplay');
+        }
+        navHeader.classList.add('mobileHeader');
+    } else {
+        links.classList.remove('mobileLinks');
+        links.classList.add('links');
+        for (let i of shadows) {
+            i.classList.remove('mobileDisplay');
+        }
+        navHeader.classList.remove('mobileHeader');
+    }
+}
 
 hamburger_menu.addEventListener("click", () => {
     container.classList.toggle("active");
+    document.body.classList.toggle('no-scroll');
+    toggleClasses();
 });
 
-/* START CODE FOR TEAM */
-
-// window.addEventListener('scroll', function() {
-//     var scrollPosition = window.scrollY;
-
-//     document.querySelectorAll('.letter').forEach(function(letter) {
-//         var letterTop = letter.getBoundingClientRect().top;
-//         var letterHeight = letter.getBoundingClientRect().height;
-
-//         var distance = Math.max(0, scrollPosition - letterTop);
+window.addEventListener('resize', toggleClasses);
 
 
-//         var scaleFactor = 1 + (distance / letterHeight);
-
-//         letter.style.transition = 'transform 0.1 ease';
-//         letter.style.transform = 'scaleY(' + scaleFactor + ')';
-//     });
-// });
-
-/* CODE FOR TEAM END */
 
 
 /* CODE FOR CARD */

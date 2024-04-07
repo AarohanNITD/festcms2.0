@@ -1,64 +1,35 @@
 {% load static %}
-<div class="navbar">
-	<link rel="stylesheet" href="{% static 'navbarAndFooter/navbar.css' %}" />
-	<div id="menuAndIcon">
-		<div class="navbarMenu">
-			<a href="{% url 'home' %}">
-				<img
-					class="logoLargeScreen"
-					src="{% static 'img/aarhn.png' %}"
-					alt=""
-				/>
-			</a>
-			<a href="{% url 'socialInitiatives' %}">Initiatives</a>
-
-			<div class="menu-wrap">
-				<ul class="menu">
-					<li class="menu-item">
-						<a class="no_border" href="#">Events</a>
-						<ul class="drop-menu">
-							<li class="drop-menu-item">
-								<a href="{% url 'events' %}">Events</a>
-							</li>
-							<li class="drop-menu-item">
-								<a href="{% url 'workshops' %}">Workshops</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
-			<a href="{% url 'timeline' %}">Timeline</a>
-			<a href="{% url 'attractions' %}">Attractions</a>
-			<a href="{% url 'aboutus' %}">About Us</a>
-			<a href="{% url 'contactus' %}">Contact Us</a>
-			<a href="{% url 'sponsors' %}">Sponsors</a>
-			<a href="{% url 'teams' %}">Teams</a>
-			<!-- <a href="{% url 'merch' %}">Merchandise</a> -->
-			<div id="indicator"></div>
-		</div>
-	</div>
-	<img class="aarohan_logo" src="{% static 'img/aarhn.png' %}" alt="" />
-	<input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon" />
-	<label for="menu-icon" class="cross-icon-teams"></label>
-	<nav class="nav">
-		<ul class="ul">
-			<li class="nav-link">
-				<a href="{% url 'socialInitiatives' %}"
-					>Initiatives</a
-				>
-			</li>
-			<li class="nav-link"><a href="{% url 'events' %}">Events</a></li>
-			<li class="nav-link"><a href="{% url 'workshops' %}">Workshops</a></li>
-			<li class="nav-link"><a href="{% url 'timeline' %}">Timeline</a></li>
-			<li class="nav-link">
-				<a href="{% url 'attractions' %}">Attractions</a>
-			</li>
-			<li class="nav-link"><a href="{% url 'aboutus' %}">About Us</a></li>
-			<li class="nav-link"><a href="{% url 'contactus' %}">Contact Us</a></li>
-			<li class="nav-link"><a href="{% url 'sponsors' %}">Sponsors</a></li>
-			<li class="nav-link"><a href="{% url 'teams' %}">Teams</a></li>
-			<!-- <li class="nav-link"><a href="{% url 'merch' %}">Merchandise</a></li> -->
-		</ul>
-	</nav>
 </div>
+</div>
+</header>
+</div>
+<div class="shadow one"></div>
+<div class="shadow two"></div>
+</div>
+
+<div class="links">
+	<ul>
+		<li>
+			<a href="#" style="--i: 0.05s;">Home</a>
+		</li>
+		<li>
+			<a href="#" style="--i: 0.1s;">Services</a>
+		</li>
+		<li>
+			<a href="#" style="--i: 0.15s;">Portfolio</a>
+		</li>
+		<li>
+			<a href="#" style="--i: 0.2s;">Testimonials</a>
+		</li>
+		<li>
+			<a href="#" style="--i: 0.25s;">About</a>
+		</li>
+		<li>
+			<a href="#" style="--i: 0.3s;">Contact</a>
+		</li>
+	</ul>
+</div>
+</div>
+</header>
+<script src="{% static 'navbar.js'%}"></script>
+<script src="{% static 'js\home.js'%}"></script>

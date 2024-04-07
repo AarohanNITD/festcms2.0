@@ -30,6 +30,54 @@ body {
     box-sizing: border-box;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
+.mobileHeader {
+    min-height: 0;
+}
+
+.mobileDisplay {
+    display: none;
+}
+
+.mobileLinks {
+    position: none;
+    width: none;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileLinks a {
+    text-decoration: none;
+    color: #eee;
+    padding: 0.7rem 0;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: hide 0.5s forwards ease;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.mobileLinks a:hover {
+    color: #fff;
+}
+
+.container.active .mobileLinks a {
+    animation: appear 0.5s forwards ease var(--i);
+}
+
 body,
 button {
     font-family: "Poppins", sans-serif;
@@ -130,7 +178,7 @@ button {
 }
 
 header {
-    min-height: 100vh;
+    min-height: 120vh;
     width: 100%;
     background: url("bg.jpg") no-repeat top center / cover;
     position: relative;
