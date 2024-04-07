@@ -385,15 +385,10 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
 }
 
-.svgIcon {}
-
-/* .svg-icon {
-    position: absolute;
-} */
-
+.svg-icon {}
 
 .svg-div h1 {
     margin-top: 9rem;

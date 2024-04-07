@@ -203,6 +203,17 @@ header {
 	padding: 0 2rem;
 }
 
+@media screen and (min-width:676px) {
+	.overlay {
+		position: relative !important;
+	}
+
+	header {
+		min-height: 100vh !important;
+	}
+
+}
+
 .container.active .bar {
 	transform: rotate(360deg);
 	background-color: transparent;

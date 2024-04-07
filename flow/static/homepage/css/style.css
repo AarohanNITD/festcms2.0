@@ -1,3 +1,5 @@
+/*Home Page Styling*/
+
 * {
     box-sizing: border-box;
 }
@@ -19,13 +21,13 @@ html {
     background-color: white;
 }
 
-.overlay {
+/* .overlay {
     position: relative !important;
-}
+} */
 
-header {
+/* header {
     min-height: 100vh !important;
-}
+} */
 
 .video_container video {
     position: absolute;
