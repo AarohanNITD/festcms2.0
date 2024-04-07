@@ -39,11 +39,11 @@ window.addEventListener('DOMContentLoaded', function () {
         }
 
 
+        audioElement.autoplay = true;
+        audioElement.loop = true;
+
         videoElement.autoplay = true;
         videoElement.muted = true;
-
-        audioElement.autoplay = true;
-        audioElement.play();
 
     }
 

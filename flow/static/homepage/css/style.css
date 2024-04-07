@@ -19,6 +19,13 @@ html {
     background-color: white;
 }
 
+.overlay {
+    position: relative !important;
+}
+
+header {
+    min-height: 100vh !important;
+}
 
 .video_container video {
     position: absolute;
